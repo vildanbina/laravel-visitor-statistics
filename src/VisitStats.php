@@ -198,7 +198,7 @@ class VisitStats
     }
 
     /**
-     * Forms a basic query to fetch all the fields from the visitortracker_visits table
+     * Forms a basic query to fetch all the fields from the activity_log table
      *
      * @return void
      */
@@ -206,7 +206,7 @@ class VisitStats
     {
         $this->sqlSelect = 'SELECT v.*';
 
-        $this->sql = ' FROM visitortracker_visits v';
+        $this->sql = ' FROM activity_log v';
         return $this;
     }
 
@@ -390,7 +390,7 @@ class VisitStats
                         MAX(id) AS max_id,
                         COUNT(*) AS visits_count,
                         COUNT(DISTINCT ip) AS visitors_count
-                    FROM visitortracker_visits
+                    FROM activity_log
                     
                     {$where}
                     GROUP BY {$field}

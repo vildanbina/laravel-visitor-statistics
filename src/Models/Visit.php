@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Visit extends Model
 {
-    protected $table = 'visitortracker_visits';
+    protected $table = 'activity_log';
 
     protected $guarded = [];
 
