@@ -2,21 +2,19 @@
 
 namespace bexvibi\Laravel\VisitorTracker\Jobs;
 
+use bexvibi\Laravel\VisitorTracker\Models\Visit;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use bexvibi\Laravel\VisitorTracker\Models\Visit;
-use bexvibi\Laravel\VisitorTracker\Geoip;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class GetGeoipData implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $visit;
-
     public $tries = 1;
+    protected $visit;
 
     /**
      * Create a new job instance.
@@ -38,24 +36,21 @@ class GetGeoipData implements ShouldQueue
     public function handle()
     {
         if (config('visitortracker.geoip_on')) {
-            $geoip = new Geoip(config('visitortracker.geoip_driver'));
-            if ($geoip->driver) {
-                if ($geoip = $geoip->driver->getDataFor($this->visit)) {
-                    $data = [
-                        'lat' => $geoip->latitude() ?: null,
-                        'long' => $geoip->longitude() ?: null,
-                        'country' => $geoip->country() ?: '',
-                        'country_code' => $geoip->countryCode() ?: '',
-                        'city' => $geoip->city() ?: '',
-                    ];
+            $geoip = geoip($this->visit->ip);
+            $data = [
+                'lat' => $geoip->getAttribute('lat') ?: null,
+                'long' => $geoip->getAttribute('lon') ?: null,
+                'country' => $geoip->getAttribute('country') ?: '',
+                'country_code' => $geoip->getAttribute('iso_code') ?: '',
+                'city' => $geoip->getAttribute('city') ?: '',
+            ];
 
-                    if ($this->shouldRecordVisit($data)) {
-                        $this->visit->update($data);
-                    } else {
-                        $this->visit->delete();
-                    }
-                }
+            if ($this->shouldRecordVisit($data)) {
+                $this->visit->update($data);
+            } else {
+                $this->visit->delete();
             }
+
         }
     }
 
@@ -64,7 +59,8 @@ class GetGeoipData implements ShouldQueue
      *
      * @return boolean
      */
-    protected static function shouldRecordVisit($data)
+    protected
+    static function shouldRecordVisit($data)
     {
         foreach (config('visitortracker.dont_record_geoip') as $fields) {
             $conditionsMet = 0;
