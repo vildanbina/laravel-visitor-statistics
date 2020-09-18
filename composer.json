@@ -19,7 +19,7 @@
     "illuminate/queue": "^7.15",
     "illuminate/contracts": "^7.15",
     "piwik/device-detector": "^3.12",
-    "guzzlehttp/guzzle": "^6.5",
+    "guzzlehttp/guzzle": "^7.0.1",
     "doctrine/dbal": "^2.10"
   },
   "require-dev": {
