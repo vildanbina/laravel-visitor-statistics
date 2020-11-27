@@ -194,7 +194,7 @@ class Tracker
         foreach (config('visitortracker.dont_record') as $fields) {
             $conditionsMet = 0;
             foreach ($fields as $field => $value) {
-                if ($data[$field] == $value) {
+                if (fnmatch($value, $data[$field])) {
                     $conditionsMet++;
                 }
             }
