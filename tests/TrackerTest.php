@@ -1,10 +1,10 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Test;
+namespace vildanbina\Laravel\VisitorTracker\Test;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use bexvibi\Laravel\VisitorTracker\Tracker;
-use bexvibi\Laravel\VisitorTracker\Models\Visit;
+use vildanbina\Laravel\VisitorTracker\Tracker;
+use vildanbina\Laravel\VisitorTracker\Models\Visit;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\User;
 

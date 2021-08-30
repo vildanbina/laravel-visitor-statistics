@@ -1,9 +1,9 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Test;
+namespace vildanbina\Laravel\VisitorTracker\Test;
 
-use bexvibi\Laravel\VisitorTracker\VisitorTrackerServiceProvider;
-use bexvibi\Laravel\VisitorTracker\Tracker;
+use vildanbina\Laravel\VisitorTracker\VisitorTrackerServiceProvider;
+use vildanbina\Laravel\VisitorTracker\Tracker;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase
@@ -11,7 +11,7 @@ class TestCase extends OrchestraTestCase
     /**
      * Load package service provider
      * @param  \Illuminate\Foundation\Application $app
-     * @return bexvibi\Laravel\VisitorTracker\VisitorTrackerServiceProvider
+     * @return vildanbina\Laravel\VisitorTracker\VisitorTrackerServiceProvider
      */
     protected function getPackageProviders($app)
     {

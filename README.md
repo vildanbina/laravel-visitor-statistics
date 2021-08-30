@@ -1,6 +1,6 @@
 # Laravel Visitor Tracker and Statistics
 
-[![Packagist](https://img.shields.io/packagist/v/bexvibi/laravel-visitor-statistics.svg?style=flat-square)](https://packagist.org/packages/bexvibi/laravel-visitor-statistics) [![Packagist](https://img.shields.io/packagist/dm/bexvibi/laravel-visitor-statistics.svg?style=flat-square)](https://packagist.org/packages/bexvibi/laravel-visitor-statistics) [![Build Status](https://travis-ci.org/bexvibi/laravel-visitor-statistics.svg?branch=master)](https://travis-ci.org/bexvibi/laravel-visitor-statistics) [![StyleCI](https://github.styleci.io/repos/175451731/shield?branch=master)](https://styleci.io/repos/175451731) [![Packagist](https://img.shields.io/packagist/l/bexvibi/laravel-visitor-statistics.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Packagist](https://img.shields.io/packagist/v/vildanbina/laravel-visitor-statistics.svg?style=flat-square)](https://packagist.org/packages/vildanbina/laravel-visitor-statistics) [![Packagist](https://img.shields.io/packagist/dm/vildanbina/laravel-visitor-statistics.svg?style=flat-square)](https://packagist.org/packages/vildanbina/laravel-visitor-statistics) [![Build Status](https://travis-ci.org/vildanbina/laravel-visitor-statistics.svg?branch=master)](https://travis-ci.org/vildanbina/laravel-visitor-statistics) [![StyleCI](https://github.styleci.io/repos/175451731/shield?branch=master)](https://styleci.io/repos/175451731) [![Packagist](https://img.shields.io/packagist/l/vildanbina/laravel-visitor-statistics.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 Track your authenticated and unauthenticated visitors, login attempts, ajax requests, and more. Includes a controller and a bunch of routes and views to display the statistics, as well as a helper class to fetch the statistics easily (in case you want to display the statistics yourself).
 
@@ -10,7 +10,7 @@ Track your authenticated and unauthenticated visitors, login attempts, ajax requ
 1) Install the package using composer:
 
 ```bash
-composer require bexvibi/laravel-visitor-statistics
+composer require vildanbina/laravel-visitor-statistics
 ```
 
 2) Run the migration to install the package's table to record visits to by executing:
@@ -26,7 +26,7 @@ protected $middlewareGroups = [
     ...
     'web' => [
         ...
-        \bexvibi\Laravel\VisitorTracker\Middleware\RecordVisits::class,
+        \vildanbina\Laravel\VisitorTracker\Middleware\RecordVisits::class,
     ],
     ...
 ];
@@ -38,7 +38,7 @@ protected $middlewareGroups = [
 ...
 'providers' => [
     ...
-    bexvibi\Laravel\VisitorTracker\VisitorTrackerServiceProvider::class,
+    vildanbina\Laravel\VisitorTracker\VisitorTrackerServiceProvider::class,
     ...
 ],
 ...
@@ -50,7 +50,7 @@ If you want to fetch and display the visitor statistics yourself register the fa
 ...
 'aliases' => [
     ...
-    'VisitStats' => bexvibi\Laravel\VisitorTracker\Facades\VisitStats::class,
+    'VisitStats' => vildanbina\Laravel\VisitorTracker\Facades\VisitStats::class,
     ...
 ],
 ...
@@ -62,7 +62,7 @@ If you want to fetch and display the visitor statistics yourself register the fa
 php artisan vendor:publish
 ```
 
-Choose `bexvibi\Laravel\VisitorTracker\VisitorTrackerServiceProvider` in the provided list.
+Choose `vildanbina\Laravel\VisitorTracker\VisitorTrackerServiceProvider` in the provided list.
 
 ## Installation - Geoapi
 
@@ -172,7 +172,7 @@ The package uses `piwik/device-detector` to parse the user agent.
 
 ## Manually Fetching and Displaying Statistics
 
-In case you are not content with the provided views, you can use the `bexvibi\Laravel\VisitorTracker\Facades\VisitStats` class to fetch the statistics data and then make your own controller and views to display this data.
+In case you are not content with the provided views, you can use the `vildanbina\Laravel\VisitorTracker\Facades\VisitStats` class to fetch the statistics data and then make your own controller and views to display this data.
 
 Take a look at the controller located at `src/Controllers/StatisticsController.php` to understand how to work with the class, it's pretty simple. The original class is located at `src/VisitStats.php` and all the methods inside are documented, in case you need more insights.
 

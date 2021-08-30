@@ -1,9 +1,9 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker;
+namespace vildanbina\Laravel\VisitorTracker;
 
-use bexvibi\Laravel\VisitorTracker\Geoip\Userinfo;
-use bexvibi\Laravel\VisitorTracker\Geoip\Ipstack;
+use vildanbina\Laravel\VisitorTracker\Geoip\Userinfo;
+use vildanbina\Laravel\VisitorTracker\Geoip\Ipstack;
 
 class Geoip
 {

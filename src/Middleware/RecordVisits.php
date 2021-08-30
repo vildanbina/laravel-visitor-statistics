@@ -1,9 +1,9 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Middleware;
+namespace vildanbina\Laravel\VisitorTracker\Middleware;
 
 use Closure;
-use bexvibi\Laravel\VisitorTracker\Tracker;
+use vildanbina\Laravel\VisitorTracker\Tracker;
 
 class RecordVisits
 {

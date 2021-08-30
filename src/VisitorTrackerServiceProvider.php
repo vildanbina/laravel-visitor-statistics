@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker;
+namespace vildanbina\Laravel\VisitorTracker;
 
 use Illuminate\Support\ServiceProvider;
 

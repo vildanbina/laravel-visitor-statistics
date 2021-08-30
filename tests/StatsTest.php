@@ -1,10 +1,10 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Test;
+namespace vildanbina\Laravel\VisitorTracker\Test;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use bexvibi\Laravel\VisitorTracker\VisitStats;
-use bexvibi\Laravel\VisitorTracker\Models\Visit;
+use vildanbina\Laravel\VisitorTracker\VisitStats;
+use vildanbina\Laravel\VisitorTracker\Models\Visit;
 use Carbon\Carbon;
 
 class StatsTest extends TestCase

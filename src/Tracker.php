@@ -1,11 +1,11 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker;
+namespace vildanbina\Laravel\VisitorTracker;
 
 use DeviceDetector\DeviceDetector;
 use DeviceDetector\Parser\OperatingSystem;
-use bexvibi\Laravel\VisitorTracker\Jobs\GetGeoipData;
-use bexvibi\Laravel\VisitorTracker\Models\Visit;
+use vildanbina\Laravel\VisitorTracker\Jobs\GetGeoipData;
+use vildanbina\Laravel\VisitorTracker\Models\Visit;
 
 class Tracker
 {
@@ -23,7 +23,7 @@ class Tracker
      * Records a visit/request based on the request()
      *
      * @param string $agent
-     * @return bexvibi\Laravel\VisitorTracker\Models\Visit
+     * @return vildanbina\Laravel\VisitorTracker\Models\Visit
      */
     public static function recordVisit($agent = null)
     {
