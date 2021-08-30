@@ -1,5 +1,5 @@
 {
-  "name": "bexvibi/laravel-visitor-statistics",
+  "name": "vildanbina/laravel-visitor-statistics",
   "description": "Visitor tracker and statistics for Laravel 5",
   "type": "library",
   "license": "MIT",
@@ -28,21 +28,21 @@
   },
   "autoload": {
     "psr-4": {
-      "bexvibi\\Laravel\\VisitorTracker\\": "src/"
+      "vildanbina\\Laravel\\VisitorTracker\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "bexvibi\\Laravel\\VisitorTracker\\Test\\": "tests/"
+      "vildanbina\\Laravel\\VisitorTracker\\Test\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "bexvibi\\Laravel\\VisitorTracker\\VisitorTrackerServiceProvider"
+        "vildanbina\\Laravel\\VisitorTracker\\VisitorTrackerServiceProvider"
       ],
       "aliases": {
-        "VisitStats": "bexvibi\\Laravel\\VisitorTracker\\Facades\\VisitStats"
+        "VisitStats": "vildanbina\\Laravel\\VisitorTracker\\Facades\\VisitStats"
       }
     }
   }

@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Facades;
+namespace vildanbina\Laravel\VisitorTracker\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

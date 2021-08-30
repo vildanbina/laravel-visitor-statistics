@@ -1,8 +1,8 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Geoip;
+namespace vildanbina\Laravel\VisitorTracker\Geoip;
 
-use bexvibi\Laravel\VisitorTracker\Models\Visit;
+use vildanbina\Laravel\VisitorTracker\Models\Visit;
 use GuzzleHttp\Client;
 
 abstract class Driver
@@ -17,7 +17,7 @@ abstract class Driver
     /**
      * Fetch data from a remote geoapi service
      *
-     * @param bexvibi\Laravel\VisitorTracker\Models\Visit $visit
+     * @param vildanbina\Laravel\VisitorTracker\Models\Visit $visit
      * @return $this
      */
     public function getDataFor(Visit $visit)

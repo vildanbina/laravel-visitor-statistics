@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Geoip;
+namespace vildanbina\Laravel\VisitorTracker\Geoip;
 
 class Userinfo extends Driver
 {

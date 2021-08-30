@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Models;
+namespace vildanbina\Laravel\VisitorTracker\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Geoip;
+namespace vildanbina\Laravel\VisitorTracker\Geoip;
 
 class Ipstack extends Driver
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker;
+namespace vildanbina\Laravel\VisitorTracker;
 
 use Carbon\Carbon;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -67,23 +67,23 @@ class VisitStats
     public static function routes()
     {
         // Summary
-        Route::get('/stats', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@summary')->name('visitortracker.summary');
+        Route::get('/stats', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@summary')->name('visitortracker.summary');
 
         // Visits
-        Route::get('/stats/all', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@allRequests')->name('visitortracker.all_requests');
-        Route::get('/stats/visits', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@visits')->name('visitortracker.visits');
-        Route::get('/stats/ajax', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@ajaxRequests')->name('visitortracker.ajax_requests');
-        Route::get('/stats/bots', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@bots')->name('visitortracker.bots');
-        Route::get('/stats/login-attempts', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@loginAttempts')->name('visitortracker.login_attempts');
+        Route::get('/stats/all', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@allRequests')->name('visitortracker.all_requests');
+        Route::get('/stats/visits', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@visits')->name('visitortracker.visits');
+        Route::get('/stats/ajax', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@ajaxRequests')->name('visitortracker.ajax_requests');
+        Route::get('/stats/bots', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@bots')->name('visitortracker.bots');
+        Route::get('/stats/login-attempts', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@loginAttempts')->name('visitortracker.login_attempts');
 
         // Grouped visits
-        Route::get('/stats/countries', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@countries')->name('visitortracker.countries');
-        Route::get('/stats/os', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@os')->name('visitortracker.os');
-        Route::get('/stats/browsers', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@browsers')->name('visitortracker.browsers');
-        Route::get('/stats/languages', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@languages')->name('visitortracker.languages');
-        Route::get('/stats/unique', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@unique')->name('visitortracker.unique');
-        Route::get('/stats/users', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@users')->name('visitortracker.users');
-        Route::get('/stats/urls', '\bexvibi\Laravel\VisitorTracker\Controllers\StatisticsController@urls')->name('visitortracker.urls');
+        Route::get('/stats/countries', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@countries')->name('visitortracker.countries');
+        Route::get('/stats/os', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@os')->name('visitortracker.os');
+        Route::get('/stats/browsers', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@browsers')->name('visitortracker.browsers');
+        Route::get('/stats/languages', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@languages')->name('visitortracker.languages');
+        Route::get('/stats/unique', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@unique')->name('visitortracker.unique');
+        Route::get('/stats/users', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@users')->name('visitortracker.users');
+        Route::get('/stats/urls', '\vildanbina\Laravel\VisitorTracker\Controllers\StatisticsController@urls')->name('visitortracker.urls');
     }
 
     /**

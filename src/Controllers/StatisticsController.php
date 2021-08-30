@@ -1,11 +1,11 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Controllers;
+namespace vildanbina\Laravel\VisitorTracker\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use bexvibi\Laravel\VisitorTracker\Facades\VisitStats;
-use bexvibi\Laravel\VisitorTracker\Models\Visit;
+use vildanbina\Laravel\VisitorTracker\Facades\VisitStats;
+use vildanbina\Laravel\VisitorTracker\Models\Visit;
 
 class StatisticsController
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace bexvibi\Laravel\VisitorTracker\Jobs;
+namespace vildanbina\Laravel\VisitorTracker\Jobs;
 
-use bexvibi\Laravel\VisitorTracker\Models\Visit;
+use vildanbina\Laravel\VisitorTracker\Models\Visit;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
